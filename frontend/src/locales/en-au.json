@@ -1,0 +1,136 @@
+{
+	"search": {
+		"select-term": "Select a term",
+		"search-course": "Search a course",
+		"add": "Add",
+		"course-not-found": "No course found",
+		"choose-subject": "Choose a subject area",
+		"subject-not-found": "No subject found",
+		"university-wide-elective": "University-wide elective",
+		"level-of-study": "Level of study",
+		"level.non-award": "Non-award",
+		"level.undergraduate": "Undergraduate",
+		"level.postgraduate": "Postgraduate",
+		"level.research": "Research",
+		"courses-availability": "Courses availability",
+		"filters": "Filters",
+		"campus": "Campus"
+	},
+	"header": {
+		"help": "Help",
+		"feedback": "Feedback",
+		"change-language": "Change Language",
+		"toggle-dark-mode": "Toggle Dark Mode"
+	},
+	"course-modal": {
+		"dates": "Dates",
+		"days": "Days",
+		"time": "Time",
+		"location": "Location",
+		"campus": "Campus",
+		"availability": "Availability",
+		"no-class-info": "No class information is currently available, please try again later in a couple of days.",
+		"conflicts-with-other-classes": "Conflicts with other classes",
+		"university-wide-elective": "University-wide elective",
+		"course_coordinator": "Course Coordinator",
+		"level_of_study": "Level of Study",
+		"course_overview": "Course Overview",
+		"no-class-times-available": "No class times available",
+		"learning-outcomes": "Learning Outcomes",
+		"textbooks": "Textbooks",
+		"assessments": "Assessments",
+		"assessment-name": "Name",
+		"assessment-weight": "Weight",
+		"assessment-due-date": "Due Date",
+		"assessment-hurdle": "Hurdle",
+		"assessment-learning-outcomes": "Learning Outcomes"
+	},
+	"course": {
+		"overview": {
+			"show-more": "Show more",
+			"show-less": "Show less"
+		}
+	},
+	"class-modal": {
+		"dates": "Dates",
+		"days": "Days",
+		"time": "Time",
+		"location": "Location",
+		"campus": "Campus",
+		"meetings-table": "Class meetings table",
+		"number": "Class Number",
+		"section": "Section",
+		"size": "Class Size",
+		"available-seats": "Available Seats",
+		"availability": "Availability",
+		"no-class-info": "No class information is currently available for this class.",
+		"conflicts": "Conflicts with other classes"
+	},
+	"calendar": {
+		"first-week": "First week",
+		"previous-week": "Previous week",
+		"next-week": "Next week",
+		"last-week": "Last week",
+		"week-days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+		"months": [
+			"Janurary",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December"
+		],
+		"shared": "Shared Timetable",
+		"immoveable-course": "Immoveable course",
+		"no-available-seats": "Class full",
+		"conflict": "Conflict with another class",
+		"open-class": "Open class details",
+		"end-actions": {
+			"copy": "Copy to clipboard",
+			"export": "Export to calendar",
+			"export-success": "Calendar file exported",
+			"share": "Share timetable",
+			"no-courses": "No courses to export",
+			"ready": "Ready for Enrolment",
+			"copy-success": "Copied to clipboard!",
+			"enrolment-instruction": "Copy the numbers below and enter them on the myEnrolment page. You can also export your classes to a calendar file."
+		}
+	},
+	"shared-timetable": {
+		"tooltip": "Open Shared Timetable",
+		"title": "Shared Timetable"
+	},
+	"help": {
+		"title": "How to use MyTimetable",
+		"steps": {
+			"welcome": "Welcome to MyTimetable! With this tool, you can easily schedule your timetable before enrolment. We highly recommend using a computer or tablet to get started.",
+			"select-term": "Select a term.",
+			"search-course": "Choose a subject area, search for a course, and click “Add” to include it in your timetable.",
+			"calendar-dnd": "Scroll down to see the calendar with your enrolled courses. You can drag a class and drop it in one of the highlighted boxes to change its time.",
+			"change-week": "Change the calendar week to see more classes.",
+			"course-details": "Click your enrolled course to see details of your enrolled classes.",
+			"course-modal": "If you encounter any class clashes when using MyTimetable, you can open the modal to change the class.",
+			"ready-button": "Once you are satisfied with your class times, click the \"Ready for Enrolment\" button at the bottom of the calendar.",
+			"access-adelaide": "You can easily enroll in courses on myEnrolment using the class numbers shown in the modal."
+		},
+		"actions": {
+			"next-step": "Next Step",
+			"previous-step": "Previous Step",
+			"get-started": "Get Started!"
+		}
+	},
+	"zoom": {
+		"zoom-in": "Zoom In",
+		"zoom-out": "Zoom Out"
+	},
+	"toast": {
+		"drop-to-change-term": "You need to drop all courses to change the term",
+		"too-many-courses": "More than 10 courses for a term is crazy! 💀"
+	}
+}
