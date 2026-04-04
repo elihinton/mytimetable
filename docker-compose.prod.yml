@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  reverse-proxy:
+    image: caddy:2
+    container_name: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./reverse-proxy/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - frontend
+      - backend
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    restart: always
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    volumes:
+      - sqlite_data:/app/data
+    environment:
+      - SQLITE_PATH=/app/data/sqlite.db
+    restart: always
+
+volumes:
+  sqlite_data:
+  caddy_data:
+  caddy_config:
