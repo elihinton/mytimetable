@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
+
 import shareRoutes from './routes/share.js';
+import startCleanupExpiredLinksJob from './jobs/cleanupExpiredUrls.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -13,6 +15,8 @@ app.use('/api/share-link', shareRoutes);
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
+
+startCleanupExpiredLinksJob();
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

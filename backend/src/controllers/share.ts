@@ -1,6 +1,6 @@
-import { eq, sql } from "drizzle-orm";
-import db from "../db/index.js";
-import { shortShareUrls } from "../db/schema.js";
+import { eq, sql } from 'drizzle-orm';
+import db from '../db/index.js';
+import { shortShareUrls } from '../db/schema.js';
 
 const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 const selectLetter = (): string => letters.charAt(Math.floor(Math.random() * letters.length));
@@ -11,7 +11,10 @@ const generateDistinctCode = async (length: number = 10): Promise<string> => {
     for (let i = 0; i < length; i++) {
       temp += selectLetter();
     }
-    const res = await db.select({ id: shortShareUrls.id }).from(shortShareUrls).where(eq(shortShareUrls.id, temp));
+    const res = await db
+      .select({ id: shortShareUrls.id })
+      .from(shortShareUrls)
+      .where(eq(shortShareUrls.id, temp));
     if (res.length === 0) {
       break;
     }
@@ -23,12 +26,12 @@ const generateDistinctCode = async (length: number = 10): Promise<string> => {
 export type AddShareResult = {
   success: boolean;
   code: string | null;
-}
+};
 
 export type ShareLookupResult = {
   found: boolean;
   data: string | null;
-}
+};
 
 export const addShareLink = async (encodedData: string): Promise<AddShareResult> => {
   try {
@@ -41,9 +44,15 @@ export const addShareLink = async (encodedData: string): Promise<AddShareResult>
   }
 };
 
-export const lookupShareLink = async (code: string, returnData: boolean = false): Promise<ShareLookupResult> => {
+export const lookupShareLink = async (
+  code: string,
+  returnData: boolean = false,
+): Promise<ShareLookupResult> => {
   try {
-    const res = await db.select({ id: shortShareUrls.id, data: shortShareUrls.data }).from(shortShareUrls).where(eq(shortShareUrls.id, code));
+    const res = await db
+      .select({ id: shortShareUrls.id, data: shortShareUrls.data })
+      .from(shortShareUrls)
+      .where(eq(shortShareUrls.id, code));
     if (res.length !== 1) {
       return { found: false, data: null };
     }
@@ -54,7 +63,6 @@ export const lookupShareLink = async (code: string, returnData: boolean = false)
   }
 };
 
-// TODO: run daily preferably in cron job
 export const removeExpiredLinks = async (): Promise<boolean> => {
   try {
     // converts into unix timestamps and compares

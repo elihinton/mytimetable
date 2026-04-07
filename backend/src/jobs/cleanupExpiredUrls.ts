@@ -6,7 +6,7 @@ const startCleanupExpiredLinksJob = () => {
   cron.schedule('0 0 * * *', async () => {
     const result = await removeExpiredLinks();
     if (!result) console.log(`Failed to remove expired links ${new Date().toISOString()}`);
-  })
-}
+  });
+};
 
 export default startCleanupExpiredLinksJob;

@@ -1,5 +1,5 @@
 import { Router, type IRouter } from 'express';
-import { addShareLink, lookupShareLink, removeExpiredLinks } from '../controllers/share.js';
+import { addShareLink, lookupShareLink } from '../controllers/share.js';
 
 const router: IRouter = Router();
 
